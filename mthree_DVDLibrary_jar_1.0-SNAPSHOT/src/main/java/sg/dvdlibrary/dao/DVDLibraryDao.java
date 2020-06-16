@@ -71,23 +71,57 @@ public interface DVDLibraryDao {
     int countDVDs()
      throws DVDLibraryPersistenceException;
     
-    // Set method for each field of DVD.
-    // Seperate to avoid switch in DAO.
+    /**
+     * Sets the date value of a DVD
+     * @param value New date
+     * @param title Title of the DVD
+     * @throws DVDLibraryPersistenceException 
+     */
     void setFieldDate(String value, String title)
      throws DVDLibraryPersistenceException;
 
+    /**
+     * Sets the rating of a DVD
+     * @param value New Rating
+     * @param title Title of DVD
+     * @throws DVDLibraryPersistenceException 
+     */
     void setFieldRating(String value, String title)
      throws DVDLibraryPersistenceException;
     
+    /**
+     * Sets the Director Name of a DVD.
+     * @param value New Director Name
+     * @param title Title of DVD
+     * @throws DVDLibraryPersistenceException 
+     */
     void setFieldDirectorName(String value, String title)
      throws DVDLibraryPersistenceException;
     
+    /**
+     * Sets the Studio of the DVD
+     * @param value New Studio
+     * @param title Title of DVD
+     * @throws DVDLibraryPersistenceException 
+     */
     void setFieldStudio(String value, String title)
      throws DVDLibraryPersistenceException;
     
+    /**
+     * Sets the Note of a DVD
+     * @param value New Note
+     * @param title Title of DVD
+     * @throws DVDLibraryPersistenceException 
+     */
     void setFieldNote(String value, String title)
      throws DVDLibraryPersistenceException;
     
+    /**
+     * Sets the imdb of DVD
+     * @param value new imdb
+     * @param title Title of DVD
+     * @throws DVDLibraryPersistenceException 
+     */
     void setFieldImdb(double value, String title)
      throws DVDLibraryPersistenceException;
     

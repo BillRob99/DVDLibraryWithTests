@@ -8,10 +8,9 @@ package sg.dvdlibrary.dto;
 import java.util.Objects;
 
 /**
- *
+ * Holds data for an individual DVD
  * @author utkua
  */
-// Object to hold DVD info
 public class DVD {
     
     // Variables with all info to be held
@@ -24,45 +23,79 @@ public class DVD {
     private String note;
     private double imdb;
 
-    // Construct with title - title is key for hashmap holding these objects
-    // Other variables will be set on creation with setters
+    /**
+     * Constructs a DVD
+     * @param title 
+     */
     public DVD(String title) {
         this.title = title;
     }
 
-    // Getters for all variables, setters for all but title
+    /**
+     * Gets the title of the DVD
+     * @return 
+     */
     public String getTitle() {
         return title;
     }
 
+    /**
+     * Gets the date
+     * @return 
+     */
     public String getDate() {
         return date;
     }
 
+    /**
+     * Gets the Mpaa Rating
+     * @return 
+     */
     public String getMpaaRating() {
         return mpaaRating;
     }
 
+    /**
+     * Sets the date
+     * @param date 
+     */
     public void setDate(String date) {
         this.date = date;
     }
 
+    /**
+     * Sets the MPaa Rating
+     * @param mpaaRating 
+     */
     public void setMpaaRating(String mpaaRating) {
         this.mpaaRating = mpaaRating;
     }
 
+    /**
+     * Sets the director name for the DVD
+     * @param directorName 
+     */
     public void setDirectorName(String directorName) {
         this.directorName = directorName;
     }
 
+    /**
+     * Sets the studio of the DVD
+     * @param studio 
+     */
     public void setStudio(String studio) {
         this.studio = studio;
     }
     
+    /**
+     * Sets the note of a DVD
+     * @param note 
+     */
     public void setNote(String note) {
         this.note = note;
     }
     
+  
     public double getImdb() {
         return imdb;
     }

@@ -13,7 +13,7 @@ import sg.dvdlibrary.service.DVDLibraryServiceLayer;
 import sg.dvdlibrary.ui.DVDLibraryView;
 
 /**
- *
+ * Orchestrates application by making calls to other classes and methods to perform operations.
  * @author utkua
  */
 public class DVDLibraryController {
@@ -22,12 +22,19 @@ public class DVDLibraryController {
     private DVDLibraryView view;
     private DVDLibraryDao dao;
     
+    /**
+     * Constructs a DVDLibraryController.
+     * @param view DVDLibraryView that will communicate with the user.
+     * @param dao DVDLibraryDao that will read and store data.
+     */
     public DVDLibraryController(DVDLibraryView view, DVDLibraryDao dao) {
         this.view = view;
         this.dao = dao;
     }
     
-    // Run is public
+    /**
+     * Runs the application by putting the menu in a while loop, waiting for user input.
+     */
     public void run() {
         // Loop until otherwise specified by user
         boolean keepGoing = true;
@@ -76,11 +83,18 @@ public class DVDLibraryController {
         }
     }
 
-    // Print menu
+    /**
+     * Prints the menu selection and returns the users choice.
+     * @return Integer value representing the users choice.
+     */
     private int getMenuSelection() {
         return view.printMenuAndGetSelection();
     }
 
+    /**
+     * Creates a DVD.
+     * @throws DVDLibraryPersistenceException 
+     */
     private void createDVD() throws DVDLibraryPersistenceException {
         // Make view display create banner to inform user
         view.displayCreateDVDBanner();
